@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {LoginPage} from "./Pages/LoginPage";
 import {LoginViewModel} from "./ViewModel/LoginViewModel";
-import {provider, toClass} from "react-ioc";
-import {ILoginViewModel} from "./ViewModel/ILoginViewModel";
+import {provider} from "react-ioc";
 import {LoginService} from "./Services/LoginService";
 
 @provider(LoginViewModel, LoginService)

@@ -1,14 +1,15 @@
 import * as React from 'react';
 import {observer} from "mobx-react";
-import {ILoginViewModel} from "../ViewModel/ILoginViewModel";
 import {LoginViewModel} from "../ViewModel/LoginViewModel";
 import {Alert, Button, Form, Icon, Input} from "antd";
 import "../App.css";
 import {inject, provider} from "react-ioc";
+const styles = require('./LoginPage.css');
 
 @observer
 export class LoginPage extends React.Component {
-    @inject loginViewModel: LoginViewModel;
+    //@inject loginViewModel: LoginViewModel;
+    loginViewModel: LoginViewModel = new LoginViewModel();
 
     private onChangeLogin = (e: React.FormEvent<HTMLInputElement>): void => {
         this.loginViewModel.loginChange(e.currentTarget.value);
@@ -27,7 +28,7 @@ export class LoginPage extends React.Component {
         const {passwordEnabled, loginEnabled, inProgress, isSuccessAuth} = this.loginViewModel;
 
         return (
-            <div className={"Login-page-container"}>
+            <div className={styles.loginContainer}>
                 <Form onSubmit={this.onSubmit} style={{width: 250}}>
                     <Form.Item>
                         <Input

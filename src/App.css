@@ -20,16 +20,16 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.Login-page-container{
+.loginContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 10%;
+}
+
+.App-link {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {

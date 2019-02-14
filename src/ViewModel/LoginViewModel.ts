@@ -4,7 +4,8 @@ import {inject} from "react-ioc";
 import {LoginService} from "../Services/LoginService";
 
 export class LoginViewModel implements ILoginViewModel {
-    @inject loginService: LoginService;
+    //@inject loginService: LoginService;
+    loginService: LoginService = new LoginService();
 
     @observable loginEnabled: boolean = false;
     @observable passwordEnabled: boolean = false;

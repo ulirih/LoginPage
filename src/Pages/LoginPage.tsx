@@ -46,6 +46,7 @@ export class LoginPage extends React.Component {
                             size={'large'}
                             disabled={!passwordEnabled}
                             onChange={this.onChangePassword}
+                            name={"password"}
                         />
                     </Form.Item>
                     <Form.Item>

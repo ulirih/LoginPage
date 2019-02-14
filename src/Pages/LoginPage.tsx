@@ -4,6 +4,7 @@ import {LoginViewModel} from "../ViewModel/LoginViewModel";
 import {Alert, Button, Form, Icon, Input} from "antd";
 import "../App.css";
 import {inject, provider} from "react-ioc";
+import DevTools from "mobx-react-devtools";
 const styles = require('./LoginPage.css');
 
 @observer
@@ -29,6 +30,7 @@ export class LoginPage extends React.Component {
 
         return (
             <div className={styles.loginContainer}>
+                <DevTools/>
                 <Form onSubmit={this.onSubmit} style={{width: 250}}>
                     <Form.Item>
                         <Input
